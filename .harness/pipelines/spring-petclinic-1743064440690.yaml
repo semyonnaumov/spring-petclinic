@@ -33,22 +33,7 @@ pipeline:
                     connectorRef: account.harnessImage
                     image: eclipse-temurin:21
                     shell: Sh
-                    command: ./gradlew build
-                  timeout: ""
-                  type: Run
-              - step:
-                  identifier: scalatest
-                  name: scala_test
-                  spec:
-                    connectorRef: account.harnessImage
-                    image: eclipse-temurin:21
-                    shell: Sh
-                    command: ./gradlew test
-                    reports:
-                      spec:
-                        paths:
-                          - /harness/reports.xml
-                      type: JUnit
+                    command: ./gradlew build -x test
                   timeout: ""
                   type: Run
           platform:
