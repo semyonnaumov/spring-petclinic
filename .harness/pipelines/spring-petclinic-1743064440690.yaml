@@ -31,7 +31,7 @@ pipeline:
                   name: build
                   spec:
                     connectorRef: account.harnessImage
-                    image: adoptopenjdk/openjdk11
+                    image: adoptopenjdk/openjdk17
                     shell: Sh
                     command: ./gradlew build
                   timeout: ""
