@@ -31,7 +31,7 @@ pipeline:
                   name: build
                   spec:
                     connectorRef: account.harnessImage
-                    image: adoptopenjdk/openjdk17
+                    image: eclipse-temurin:21
                     shell: Sh
                     command: ./gradlew build
                   timeout: ""
@@ -40,6 +40,9 @@ pipeline:
                   identifier: scalatest
                   name: scala_test
                   spec:
+                    connectorRef: account.harnessImage
+                    image: eclipse-temurin:21
+                    shell: Sh
                     command: ./gradlew test
                     reports:
                       spec:
