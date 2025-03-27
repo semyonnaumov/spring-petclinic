@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_semyonnaumov_spring_petclinic_1743064464917-push-trigger-input-set
+  identifier: Build_semyonnaumov_spring_petclinic_1743064464917pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_semyonnaumov_spring_petclinic_1743064464917
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
